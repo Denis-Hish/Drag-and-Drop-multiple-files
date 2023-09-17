@@ -12,6 +12,9 @@
   padding: 30px;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .drug-n-drop .container {
   text-align: center;
@@ -72,6 +75,9 @@
   opacity: 1;
   visibility: hidden;
 }
+.drug-n-drop .container .drop-section .col span:nth-child(3) {
+  font-weight: 500;
+}
 .drug-n-drop .container .drop-section .cloud-icon {
   margin: 25px 0 20px;
 }
@@ -83,7 +89,7 @@
 }
 .drug-n-drop .container .drop-section button {
   color: #fff;
-  background-color: #5874c6;
+  background-color: #4967c1;
   border: none;
   outline: none;
   padding: 7px 20px;
@@ -91,6 +97,9 @@
   margin-top: 20px;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.drug-n-drop .container .drop-section button:hover {
+  background-color: #5874c6;
 }
 .drug-n-drop .container .drop-section input {
   display: none;
@@ -107,7 +116,7 @@
   transform: scale(1);
 }
 .drug-n-drop .container .list-section {
-  display: block;
+  display: none;
   text-align: left;
   margin: 0px 35px;
   padding-bottom: 20px;
@@ -133,6 +142,9 @@
 .drug-n-drop .container .list-section .list li .col:nth-child(1) {
   flex: 0.15;
   text-align: center;
+}
+.drug-n-drop .container .list-section .list li .col:nth-child(1) img {
+  max-height: 50px;
 }
 .drug-n-drop .container .list-section .list li .col:nth-child(2) {
   flex: 0.75;
@@ -161,7 +173,7 @@
 }
 .drug-n-drop .container .list-section .list li .col:nth-child(2) .file-progress span {
   display: block;
-  width: 50%;
+  width: 0%;
   height: 100%;
   border-radius: 8px;
   background-image: linear-gradient(120deg, #6b99fd, #9385ff);

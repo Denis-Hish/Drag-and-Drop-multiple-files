@@ -7,13 +7,16 @@
 }
 
 /*------------ Drag & Drop multiple files ------------*/
-
 .drug-n-drop {
    font-family: 'Roboto', sans-serif;
    background-color: #ced4da;
    padding: 30px;
+
    width: 100vw;
    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
    .container {
       text-align: center;
@@ -81,6 +84,10 @@
                opacity: 1;
                visibility: hidden;
             }
+
+            span:nth-child(3) {
+               font-weight: 500;
+            }
          }
 
          .cloud-icon {
@@ -96,7 +103,7 @@
 
          button {
             color: #fff;
-            background-color: #5874c6;
+            background-color: #4967c1;
             border: none;
             outline: none;
             padding: 7px 20px;
@@ -105,6 +112,10 @@
             cursor: pointer;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+            &:hover {
+               background-color: #5874c6;
+            }
          }
 
          input {
@@ -112,6 +123,8 @@
          }
       }
 
+      // dragging effect
+      // эффект при перетаскивании
       .drag-over-effect {
          .col {
             &:first-child {
@@ -130,7 +143,7 @@
       }
 
       .list-section {
-         display: block; //! N O N E
+         display: none; // ! N O N E
          text-align: left;
          margin: 0px 35px;
          padding-bottom: 20px;
@@ -159,6 +172,9 @@
                   &:nth-child(1) {
                      flex: 0.15;
                      text-align: center;
+                     img {
+                        max-height: 50px;
+                     }
                   }
 
                   &:nth-child(2) {
@@ -192,7 +208,7 @@
 
                         span {
                            display: block;
-                           width: 50%;
+                           width: 0%;
                            height: 100%;
                            border-radius: 8px;
                            background-image: linear-gradient(
